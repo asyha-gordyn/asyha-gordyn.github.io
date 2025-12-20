@@ -28,7 +28,10 @@
     header{background:linear-gradient(135deg,#2c3e50,#34495e);color:#fff;padding:60px 20px;text-align:center}
     header h1{font-size:2.2rem;margin-bottom:10px}
     header p{opacity:.9}
-    .btn{display:inline-block;margin-top:20px;background:#25D366;color:#fff;padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:600}
+    .btn{display:inline-flex;align-items:center;gap:8px;margin-top:20px;background:#25D366;color:#fff;padding:12px 26px;border-radius:30px;text-decoration:none;font-weight:600;transition:.3s;border:none;cursor:pointer}
+.btn svg{width:18px;height:18px;fill:#fff}
+.btn:hover{background:#1ebe5d}
+.btn:hover{background:#1f2d3a}
 
     section{padding:60px 20px;max-width:1100px;margin:auto}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
@@ -65,7 +68,10 @@
 
   <h1>Gordyn & Wallpaper Profesional</h1>
   <p>Penjualan & Pemasangan • Rapi • Elegan • Bergaransi</p>
-  <a class="btn" href="https://wa.me/6281221173880?text=Halo%20saya%20ingin%20konsultasi%20gordyn%20dan%20wallpaper">Konsultasi WhatsApp</a>
+  <a class="btn" href="https://wa.me/6281221173880?text=Halo%20saya%20ingin%20konsultasi%20gordyn%20dan%20wallpaper">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.04 2.003c-7.732 0-14.04 6.306-14.04 14.04 0 2.474.646 4.892 1.876 7.02l-1.99 7.272 7.45-1.955a14.03 14.03 0 006.704 1.706h.002c7.733 0 14.04-6.306 14.04-14.04 0-3.745-1.46-7.264-4.108-9.912a13.93 13.93 0 00-9.934-4.131zm0 25.51h-.002a11.64 11.64 0 01-5.94-1.63l-.425-.252-4.42 1.16 1.18-4.307-.277-.442a11.64 11.64 0 011.781-14.21 11.63 11.63 0 018.103-3.35c3.107 0 6.03 1.21 8.23 3.41a11.55 11.55 0 013.41 8.23c0 6.41-5.21 11.62-11.62 11.62zm6.38-8.71c-.35-.18-2.07-1.02-2.39-1.14-.32-.12-.55-.18-.78.18-.23.35-.9 1.14-1.1 1.38-.2.23-.41.26-.76.09-.35-.18-1.48-.55-2.82-1.75-1.04-.93-1.75-2.08-1.96-2.43-.2-.35-.02-.54.16-.72.16-.16.35-.41.53-.61.18-.2.23-.35.35-.58.12-.23.06-.44-.03-.61-.09-.18-.78-1.87-1.07-2.56-.28-.67-.57-.58-.78-.59l-.67-.01c-.23 0-.61.09-.93.44-.32.35-1.22 1.19-1.22 2.9 0 1.71 1.25 3.36 1.42 3.6.18.23 2.46 3.76 5.96 5.27.83.36 1.48.57 1.99.73.84.27 1.6.23 2.2.14.67-.1 2.07-.84 2.36-1.65.29-.81.29-1.5.2-1.65-.09-.15-.32-.23-.67-.41z"/></svg>
+    Konsultasi WhatsApp
+  </a>
 </header>
 
 <section style="text-align:center">
@@ -79,13 +85,15 @@
 </section>
 
 <section style="text-align:center">
-  <h2>Galeri Produk</h2>
+  <h2>Galeri Produk</h2></h2>
   <hr style="width:80px;margin:16px auto 40px;border:none;height:3px;background:#2c3e50;border-radius:4px" />
-  <div class="grid gallery">
-    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36" />
-    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" />
-    <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed" />
-    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" />
+  <div class="grid gallery" id="gallery"></div>
+
+  
+
+  <div style="margin-top:20px;display:flex;justify-content:center;gap:12px">
+    <button id="prev" class="btn" style="background:#34495e">Sebelumnya</button>
+    <button id="next" class="btn" style="background:#34495e">Selanjutnya</button>
   </div>
 </section>
 
@@ -111,7 +119,10 @@
 <section class="cta">
   <h2>Siap Bikin Rumah Makin Estetik?</h2>
   <p>Gratis konsultasi & survey area. Harga transparan, hasil memuaskan.</p>
-  <a class="btn" href="https://wa.me/6281221173880?text=Halo%20saya%20ingin%20survey%20lokasi">Pesan Sekarang</a>
+  <a class="btn" href="https://wa.me/6281221173880?text=Halo%20saya%20ingin%20survey%20lokasi">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.04 2.003c-7.732 0-14.04 6.306-14.04 14.04 0 2.474.646 4.892 1.876 7.02l-1.99 7.272 7.45-1.955a14.03 14.03 0 006.704 1.706h.002c7.733 0 14.04-6.306 14.04-14.04 0-3.745-1.46-7.264-4.108-9.912a13.93 13.93 0 00-9.934-4.131z"/></svg>
+    Pesan Sekarang
+  </a>
 </section>
 
 <footer>
@@ -121,11 +132,49 @@
 <div class="lightbox" id="lightbox"><img src="" /></div>
 
 <script>
+  // Data Galeri (bisa ditambah bebas)
+  const images = [
+    'https://images.unsplash.com/photo-1524758631624-e2822e304c36',
+    'https://images.unsplash.com/photo-1505691938895-1758d7feb511',
+    'https://images.unsplash.com/photo-1615874959474-d609969a20ed',
+    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c',
+    'https://images.unsplash.com/photo-1600121848594-d8644e57abab',
+    'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea',
+    'https://images.unsplash.com/photo-1586023492125-27b2c045efd7',
+    'https://images.unsplash.com/photo-1600210492493-0946911123ea'
+  ];
+
+  let page = 0;
+  const perPage = 4;
+  const gallery = document.getElementById('gallery');
+  const pagination = document.getElementById('pagination');
+
+  function renderGallery(){
+    gallery.innerHTML = '';
+    const start = page * perPage;
+    const end = start + perPage;
+    images.slice(start, end).forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.onclick = () => { lbImg.src = src; lb.style.display = 'flex'; };
+      gallery.appendChild(img);
+    });
+    
+  }
+
+    document.getElementById('next').onclick = () => {
+    const totalPage = Math.ceil(images.length / perPage);
+    if(page < totalPage - 1){ page++; renderGallery(); }
+  };
+
+  document.getElementById('prev').onclick = () => {
+    if(page > 0){ page--; renderGallery(); }
+  };
+
+  renderGallery();
+
   const lb=document.getElementById('lightbox');
   const lbImg=lb.querySelector('img');
-  document.querySelectorAll('.gallery img').forEach(img=>{
-    img.onclick=()=>{lbImg.src=img.src;lb.style.display='flex'}
-  });
   lb.onclick=()=>lb.style.display='none';
 </script>
 
