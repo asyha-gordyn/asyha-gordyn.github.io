@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asyha-gordyn.github.io/sitemap.xml
