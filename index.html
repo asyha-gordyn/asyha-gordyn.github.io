@@ -129,7 +129,7 @@
   <p>© 2025 Gordyn & Wallpaper Bandung • All Rights Reserved</p>
 </footer>
 
-<div class="lightbox" id="lightbox"><img src="" /></div>
+<div class="lightbox" id="lightbox"><img src="" alt="Preview foto produk gordyn dan wallpaper ASYHA" /></div>
 
 <script>
   // Data Galeri (bisa ditambah bebas)
@@ -153,10 +153,11 @@
     gallery.innerHTML = '';
     const start = page * perPage;
     const end = start + perPage;
-    images.slice(start, end).forEach(src => {
+    images.slice(start, end).forEach((src, index) => {
       const img = document.createElement('img');
       img.src = src;
-      img.onclick = () => { lbImg.src = src; lb.style.display = 'flex'; };
+      img.alt = 'Produk gordyn dan wallpaper ASYHA model ' + (start + index + 1);
+      img.onclick = () => { lbImg.src = src; lbImg.alt = img.alt; lb.style.display = 'flex'; };
       gallery.appendChild(img);
     });
     
